@@ -28,9 +28,9 @@ INDEX
     3.  Page Templates
         a. Home
         b. Hues
-        c. Specum
-			c.1 	Specum entry
-		d. Error Page
+        c. Spectrum
+		d. Post
+		e. Error Page
 	4. 	Comments
 
 ----------------------------------------------------------------------------- */
@@ -373,7 +373,64 @@ input[type="submit"]:hover {
     box-shadow: 0px 0px 15px #00000023;
 }
 
-/*  	c. 	Specum */
+/*  	b. 	Hues     */
+
+.hue {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 50px;
+	min-height: 82vh;
+	margin: 50px;
+}
+
+.hue-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 50px;
+	justify-items: center;
+}
+
+.hue-wrapper {
+	padding: 20px;
+	box-shadow: 0px 0px 15px #00000023;
+}
+
+.hue-header {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.hue-cat {
+	align-self: flex-end;
+	width: 80px;
+	padding: 8px;
+	background-color: antiquewhite;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.hue-title {
+	font-size: 20px;
+}
+
+.hue-excerpt {
+	font-weight: lighter;
+}
+
+.read-more {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.hue-excerpt > p > .read-more {
+	display: block;
+	margin-top: 30px;
+}
+
+/*  	c. 	Spectrum */
 
 .spec {
 	display: flex;
@@ -451,14 +508,6 @@ input[type="submit"]:hover {
 .spec-tags > li > a:hover {
 	text-decoration: underline;
 	box-shadow: none;
-}
-
-.spec-read-more {
-	display: block;
-	margin-top: 30px;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: end;
 }
 
 .spec-sidebar {
@@ -541,7 +590,8 @@ input[type="submit"]:hover {
 }
 
 .single-entry-content {
-	margin-top: 22px;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 .single-entry-content > ul > li {
@@ -549,7 +599,6 @@ input[type="submit"]:hover {
 }
 
 .single-entry-footer {
-	margin-top: 30px;
 	margin-bottom: 30px;
 	text-align: end;
 	font-size: 14px;

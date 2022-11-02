@@ -4,7 +4,11 @@
             <article id="single-entry-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header>
                     <h1 class="single-entry-title"><?php the_title(); ?></h1>
-                    <p class="single-entry-cat"><?php echo get_the_category_list( ', ' ); ?></p>
+                    <?php if ( get_the_category_list( ', ' ) ): ?>
+                        <p class="single-entry-cat"><?php echo get_the_category_list( ', ' ); ?></p>
+                    <?php elseif ( get_the_term_list( get_the_ID(), 'hue_cat' ) ): ?>
+                        <p class="single-entry-tax"><?php echo get_the_term_list( get_the_ID(), 'hue_cat' ); ?></p>
+                    <?php endif; ?>
                 </header>
                 <div class="single-entry-content">
                     <?php the_content(); ?>

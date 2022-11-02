@@ -7,4 +7,3 @@
         <h1><?php  _e( 'Sorry, nothing found', 'colaurs' ); ?></h1>
     <?php endif; ?>
 </div>
-<?php get_sidebar(); ?>
